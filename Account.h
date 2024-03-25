@@ -8,7 +8,7 @@ protected:
 	double balance;
 	double charges;
 public:
-	Account(double b);
+	Account(double b, int n, string accountHolder);
 	virtual void Deposit(double a);
 	virtual void Withdraw(double a);
 
