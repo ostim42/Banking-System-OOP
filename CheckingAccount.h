@@ -12,4 +12,4 @@ public:
     void print() const override;
 };
 
-#endif // CHECKINGACCOUNT_H
+#endif
