@@ -4,11 +4,14 @@ class Transaction {
 public:
   double amount;
   double balance;
-  int n;
-  double transaction[];
   double date;
+  double withdrawls;
+  double deposits;
+  double payments;
+  double credits;
   void Withdraw();
   void Deposit();
+  void Payment()
   void CcStatement();
 };
   
