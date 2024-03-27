@@ -1,6 +1,6 @@
 //transaction.h
 
-class Transaction: public Account {
+class Transaction {
 private:
   double date[100];
   double payments[100];
@@ -9,6 +9,5 @@ private:
 public:
   Transaction(double d[100], double pay[100]);
   void Payment();
-  void CcStatement();
 };
   
