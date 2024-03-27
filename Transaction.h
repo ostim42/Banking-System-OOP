@@ -1,7 +1,7 @@
 //transaction.h
 
 class Transaction {
-public:
+private:
   double amount;
   double balance;
   double date;
@@ -9,6 +9,8 @@ public:
   double deposits;
   double payments;
   double credits;
+public:
+  Transaction(double amt, double pay);
   void Withdraw();
   void Deposit();
   void Payment()
