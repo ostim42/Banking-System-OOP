@@ -2,17 +2,12 @@
 
 class Transaction {
 private:
-  double amount;
-  double balance;
-  double date;
-  double withdrawls;
-  double deposits;
-  double payments;
+  double date[100];
+  double payments[100];
   double credits;
+  int n;
 public:
-  Transaction(double amt, double pay);
-  void Withdraw();
-  void Deposit();
+  Transaction(double date, double pay);
   void Payment()
   void CcStatement();
 };
