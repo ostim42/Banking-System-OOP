@@ -1,5 +1,5 @@
 #include "Account.h"
-
+Account::Account() {};
 Account::Account(double b, int n, std::string a) {
 	balance = b;
 	accountNumber = n;
