@@ -1,5 +1,5 @@
 //CcStatement.h
 
-class CcStatement {
+class CcStatement: public Transaction {
 private:
   
