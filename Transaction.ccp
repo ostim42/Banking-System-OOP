@@ -8,6 +8,7 @@ Transaction::Transaction(double d, double pay){
 date = d;
 payment = pay;
 credits = 0;
+n = 0
 }
 
 Transaction::Payment(){
