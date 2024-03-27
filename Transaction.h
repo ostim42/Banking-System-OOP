@@ -7,7 +7,7 @@ private:
   double credits;
   int n;
 public:
-  Transaction(double date, double pay);
+  Transaction(double d, double pay);
   void Payment()
   void CcStatement();
 };
