@@ -2,37 +2,27 @@
 
 #include "Transaction.h"
   
-Transaction::Transaction(double amt, double pay){
-amount = amt;
-balance = 0;
-date = 20240326;
-withdrawls = 0;
-deposits = 0;
+
+
+Transaction::Transaction(double d, double pay){
+date = d;
 payment = pay;
 credits = 0;
 }
 
-Transaction::Withdraw(){
-balance -= amount;
-withdrawls += amount;
-}
-
-Transaction::Deposit(){
-balance += amount;
-deposits += amount;
-}
-
 Transaction::Payment(){
-credits += payment;
+credits += payment[n];
+n++
 }
 
 Transaction::CcStatement(){
-cout << " " <<deposits<< endl;
-cout << "-" <<withdrawls <<endl;
-cout << "Balance:  " <<balance <<endl <<endl;
+for (int i, i<n, i++){
+cout <<date[n] << "     $" <<payment[n] <<endl;
+}
+cout <<endl;
+cout <<"Total Payment Due: -" <<credits <<endl;
 
-cout <<"Credit Card: -" <<credits <<endl;
-
+cout << "Old Balance: " <<balance;
 if(balance>credits){
 balance -= credits
 credits = 0;
