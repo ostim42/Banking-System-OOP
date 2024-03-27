@@ -13,7 +13,7 @@ credits = 0;
 Transaction::Payment(){
 credits += payment;
 }
-}
+
 
 
 
