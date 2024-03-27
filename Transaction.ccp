@@ -4,7 +4,7 @@
   
 
 
-Transaction::Transaction(double d, double pay){
+Transaction::Transaction(double d[100], double pay[100]){
 date = d;
 payment = pay;
 credits = 0;
