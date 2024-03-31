@@ -9,5 +9,5 @@ string text;
 public:
   CcStatement();
   CcStatement(double d, double pay, double creds, int AccNum, double bal, double charge, string a);
-  virtual void DisplayStatement();
+  void DisplayStatement(int n);
 }
