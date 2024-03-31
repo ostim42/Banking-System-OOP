@@ -2,6 +2,9 @@
 
 #include "Transaction.h"
 #include "Account.h"
+#include <String>
+#include <iostream>
+using namespace std;
 
 class CcStatement: public Transaction, public Account {
 private: 
