@@ -6,6 +6,6 @@
 class CcStatement: public Transaction, public Account {
 public:
   CcStatement();
-private:
+  CcStatement(
   virtual void DisplayStatement();
 }
