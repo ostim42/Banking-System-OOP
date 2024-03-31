@@ -2,5 +2,5 @@
 
 class CcStatement: public Transaction {
 private:
-  void DisplayStatement()
+  virtual void DisplayStatement()
 }
