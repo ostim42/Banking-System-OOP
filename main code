@@ -47,6 +47,7 @@ cout "What is the amount paid?" <<endl;
 cin >> PAY;
 Transaction T1(DATE, PAY);
 T1.Payment();
+cout "The transaction of $" <<PAY <<" has been recorded" <<endl;
 }
 if(n=7){
 }
