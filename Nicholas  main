@@ -5,5 +5,5 @@ D = 20240403;
 cout << "What is the amount paid in this transaction? " <<endl;
 cin >> D;
 Transaction PAYMENT (D, P);
-PAYMENT:payment();
+PAYMENT::payment();
 
