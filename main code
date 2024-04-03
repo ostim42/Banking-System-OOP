@@ -1,0 +1,53 @@
+#include <iostream>
+#include <String>
+#include "Account.h"
+#include "User.h"
+#include "CheckingAccount.h"
+#include "SavingAccount.h"
+#include "Transaction.h"
+#include "CcStatemnt.h"
+using namespace std;
+
+
+Account A1(1000 ,1,"John");
+double DATE = 20240403;
+double PAY;
+
+
+int n = 0;
+if (n=0) {
+cout <<"1. View Account Info" <<endl <<"2. Deposit" <<endl <<"3. Withdraw" <<endl <<"4.View Checking Account Info" <<endl << "5. Withdraw from Saving Account" <<endl << "6. Record Transaction" <<endl <<"7. View Credit Card Statement"<<endl;
+cout "Please enter the corresponding number of the action you wish to execute.  ";
+cin >> n
+cout <<endl;
+}
+if (n=1){
+A1.print();
+}
+if(n=2){
+double DEP;
+cout <<"What amount would you like to deposit? " <<endl;
+cin >> DEP;
+A1.Deposit(DEP);
+cout <<endl << "$" <<DEP <<" has been deposited" <<endl;
+}
+if(n=3) {
+double WIT
+cout <<"What amount would you like to withdraw? " <<endl;
+cin >> WIT;
+A1.Withdraw(WIT);
+cout <<endl << "$" <<WIT <<" has been withdrawn" <<endl;
+}
+if(n=4){
+}
+if(n=5){
+}
+if(n=6){
+cout "What is the amount paid?" <<endl;
+cin >> PAY;
+Transaction T1(DATE, PAY);
+T1.Payment();
+}
+if(n=7){
+}
+
