@@ -1,5 +1,6 @@
 //CcStatement.h
 
+#pragma once
 #include "Transaction.h"
 #include "Account.h"
 #include <String>
