@@ -1,4 +1,5 @@
 //transaction.h
+#pragma once
 
 class Transaction {
 private:
