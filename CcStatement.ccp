@@ -9,8 +9,12 @@ CcStatement::CcStatement(double d, double pay, double creds, int AccNum, double 
 
 DisplayStatement(int n){
 n = balance - credits;
-text = "Date: " + to_string(date) + endl + "Credits due: " + endl + to_string(credits) + endl + endl + "Old balance: " + to_string(balance) + endl + "Balance after payment: " + to_string(n);
 
+if (n>0){
+text = "Date: " + to_string(date) + endl + "Credits due: " + endl + to_string(credits) + endl + endl + "Old balance: " + to_string(balance) + endl + "Balance after payment: " + to_string(n);}
+else{
+text = "Date: " + to_string(date) + endl + "Credits due: " + endl + to_string(credits) + endl + endl + "Account balance: " + to_string(balance) + endl + "Balance insufficient for credit card payment."
+}
 cout << text <<endl;
 
 }
