@@ -8,12 +8,12 @@ class User {
 private:
     static const int MaxAccounts = 10;
     std::string name;
-    unsigned long studentNumber;
+    unsigned long accountNumber;
     Account* accounts[MaxAccounts];
     int numAccounts;
 
 public:
-    User(const std::string& name, unsigned long studentNumber);
+    User(const std::string& name, unsigned long accountNumber);
     bool addAccount(Account* account);
     void printAccounts() const;
 };
