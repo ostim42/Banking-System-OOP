@@ -1,8 +1,8 @@
 #include "User.h"
 #include <iostream>
 
-User::User(const std::string& name, unsigned long studentNumber)
-    : name(name), studentNumber(studentNumber), numAccounts(0) {}
+User::User(const std::string& name, unsigned long accountNumber)
+    : name(name), accountNumber(accountNumber), numAccounts(0) {}
 
 bool User::addAccount(Account* account) {
     if (numAccounts < MaxAccounts) {
