@@ -14,5 +14,6 @@ void Account::Deposit(double a) {
 void Account::Withdraw(double a) {
 	balance -= a;
 }
-void Account::print(double b, double c, std::string a, int n) {
-	std::cout << "Balance: " << b << std::endl << "Charges: " << c << std::endl << "Account Number: "  << n << std::endl << "Account Holder: " << a;
+void Account::print() {
+	std::cout << "Balance: " << balance << std::endl << "Charges: " << charges << std::endl << "Account Number: "  << accountNumber << std::endl << "Account Holder: " << accountHolder;
+}
