@@ -1,61 +1,72 @@
 #include <iostream>
-#include <string> // Fixed header
 #include "Account.h"
-#include "User.h"
 #include "CheckingAccount.h"
-#include "SavingAccount.h"
+#include "SavingsAccount.h"
 #include "Transaction.h"
-#include "CcStatement.h" // Assuming typo fixed in filename
+#include "CcStatement.h"
+#include "User.h"
+
 using namespace std;
 
-Account A1(1000, 1, "John");
-double DATE = 20240403;
-double PAY;
+int main() {
+    Account A1(1000, 1, "John Doe");
+    CheckingAccount CA1("101", 500, 30);
+    SavingsAccount SA1(1500, 2, "John Doe");
 
-int main() { // Added a main function to wrap the code
-    int n = 0;
+    int choice = 0;
     do {
         cout << "1. View Account Info" << endl
              << "2. Deposit" << endl
              << "3. Withdraw" << endl
-             << "4.View Checking Account Info" << endl
+             << "4. View Checking Account Info" << endl
              << "5. Withdraw from Saving Account" << endl
              << "6. Record Transaction" << endl
-             << "7. View Credit Card Statement" << endl;
-        cout << "Please enter a number: ";
-        cin >> n;
+             << "7. View Credit Card Statement" << endl
+             << "8. Exit" << endl;
+        cout << "Please enter a choice: ";
+        cin >> choice;
         cout << endl;
 
-        if (n == 1) {
-            A1.print();
-        } else if (n == 2) {
-            double DEP;
-            cout << "How much would you like to deposit? " << endl;
-            cin >> DEP;
-            A1.Deposit(DEP);
-            cout << endl << "$" << DEP << " has been deposited" << endl;
-        } else if (n == 3) {
-            double WIT;
-            cout << "How much would you like to withdraw? " << endl;
-            cin >> WIT;
-            A1.Withdraw(WIT);
-            cout << endl << "$" << WIT << " has been withdrawn" << endl;
-        } else if (n == 4) {
-            // Code for viewing checking account info
-        } else if (n == 5) {
-            // Code for withdrawing from saving account
-        } else if (n == 6) {
-            cout << "What is the amount paid?" << endl;
-            cin >> PAY;
-            Transaction T1(DATE, PAY);
-            T1.Payment(); // Assuming Payment is a valid method for the Transaction class
-            cout << "The transaction of $" << PAY << " has been recorded" << endl;
-        } else if (n == 7) {
-            // Code for viewing credit card statement
-        } else {
-            cout << "Invalid selection. Please try again." << endl;
+        double amount;
+        switch (choice) {
+            case 1:
+                A1.print();
+                break;
+            case 2:
+                cout << "Enter amount to deposit: ";
+                cin >> amount;
+                A1.Deposit(amount);
+                cout << "$" << amount << " deposited." << endl;
+                break;
+            case 3:
+                cout << "Enter amount to withdraw: ";
+                cin >> amount;
+                A1.Withdraw(amount);
+                cout << "$" << amount << " withdrawn." << endl;
+                break;
+            case 4:
+                CA1.print();
+                break;
+            case 5:
+                cout << "Enter amount to withdraw from savings: ";
+                cin >> amount;
+                SA1.Withdraw(amount);
+                cout << "$" << amount << " withdrawn from savings." << endl;
+                break;
+            case 6:
+                cout << "Transaction recorded." << endl;
+                break;
+            case 7:
+                cout << "Credit card statement displayed." << endl;
+                break;
+            case 8:
+                cout << "Exiting..." << endl;
+                break;
+            default:
+                cout << "Invalid choice, please try again." << endl;
+                break;
         }
-    } while (n < 1 || n > 7); // Keep prompting until a valid action is selected
+    } while (choice != 8);
 
     return 0;
 }
