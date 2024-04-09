@@ -12,9 +12,11 @@ n = balance - credits;
 
 if (n>0){
 text = "Date: " + to_string(date) + endl + "Credits due: " + endl + to_string(credits) + endl + endl + "Old balance: " + to_string(balance) + endl + "Balance after payment: " + to_string(n);}
+// if there is enough balance to pay off credit card
 else{
 text = "Date: " + to_string(date) + endl + "Credits due: " + endl + to_string(credits) + endl + endl + "Account balance: " + to_string(balance) + endl + "Balance insufficient for credit card payment."
 }
+// If there is insufficient balance
 cout << text <<endl;
 
 }
