@@ -8,3 +8,4 @@ void CheckingAccount::print() const {
     Account::print();
     std::cout << "Days Between Paychecks: " << daysBetweenPaychecks << std::endl;
 }
+// Reminding user when the next paycheck is coming
